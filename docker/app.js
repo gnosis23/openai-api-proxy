@@ -182,7 +182,7 @@ app.all(`*`, async (req, res) => {
   try {
     
     // 如果是 chat completion 和 text completion，使用 SSE
-    if( (req.url.startsWith('/v1/completions') || req.url.startsWith('/v1/chat/completions')) && req.body.stream ) {
+    if( !process.env.DISABLE_SSE && (req.url.startsWith('/v1/completions') || req.url.startsWith('/v1/chat/completions')) && req.body.stream ) {
       console.log("使用 SSE");
       const response = await myFetch(url, options);
       if( response.ok )

@@ -46,6 +46,7 @@ The proxy address is http://${IP}:9000
 4. TENCENT_CLOUD_SID: Tencent Cloud secret_id
 5. TENCENT_CLOUD_SKEY: Tencent Cloud secret_key
 6. TENCENT_CLOUD_AP: Tencent Cloud region (e.g. ap-singapore Singapore)
+7. DISABLE_SSE: Disable SSE
 
 ## API Usage
 
